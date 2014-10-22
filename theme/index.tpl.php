@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id='wrapper'>
-    <div id='header'><?=$header?></div>
+    <div id='header'><?=$header?><div><?php echo get_navbar($menu);?> </div></div>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
   </div>

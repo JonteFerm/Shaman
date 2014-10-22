@@ -1,3 +1,4 @@
+@import url('source.css');
 /**
  * General elements
  */
@@ -39,6 +40,24 @@ body {
   color: #666;
 }
  
+ul.standard{
+	list-style-type: none;
+	padding: 0;
+}
+
+ul.standard li{
+	display: inline;
+	margin-right: 2em;
+}
+
+ul.standard li a{
+	color: #000;
+	font-size:large;
+}
+
+ul.standard li a:hover{
+	text-decoration: none;
+}
  
 /**
  * Layout for main
