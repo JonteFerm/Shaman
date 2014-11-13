@@ -14,19 +14,28 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
  
  
 /**
- * Define Anax paths.
+ * Define Shaman paths.
  *
  */
 define('SHAMAN_INSTALL_PATH', __DIR__ . '/..');
 define('SHAMAN_THEME_PATH', SHAMAN_INSTALL_PATH . '/theme/render.php');
- 
+
+
+/**
+* Image paths
+*
+*/
+define('IMG_PATH', __DIR__ . DIRECTORY_SEPARATOR . 'img' . DIRECTORY_SEPARATOR);
+define('CACHE_PATH', __DIR__ . DIRECTORY_SEPARATOR .'cache' .DIRECTORY_SEPARATOR);
+define('GALLERY_PATH', __DIR__ .DIRECTORY_SEPARATOR .'img' .DIRECTORY_SEPARATOR .'gallery');
+define('GALLERY_BASE', 'gallery/');
  
 /**
  * Include bootstrapping functions.
  *
  */
 include(SHAMAN_INSTALL_PATH . '/src/bootstrap.php');
-include('../src/CDatabase/CDatabase.php');
+
  
  
 /**
@@ -38,7 +47,7 @@ session_start();
  
  
 /**
- * Create the Anax variable.
+ * Create the Shaman variable.
  *
  */
 $shaman = array();
@@ -80,7 +89,13 @@ $shaman['footer'] = <<<EOD
 <footer><span class='sitefooter'>Copyright (c) Jonathan Ferm 2014 | <a href='https://github.com/JonteFerm'> på GitHub</a> | <a href='http://validator.w3.org/unicorn/check?ucn_uri=referer&amp;ucn_task=conformance'>Unicorn</a></span></footer>
 EOD;
  
-$shaman['database']['dsn'] = 'mysql:host=localhost;dbname=movie;';
+$shaman['database']['dsn'] = 'mysql:host=127.0.0.1;dbname=web_content;';
 $shaman['database']['username'] = 'root';
 $shaman['database']['password'] = '';
 $shaman['database']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
+
+/*$shaman['database']['dsn'] = 'mysql:host=blu-ray.student.bth.se;dbname=jofe14;';
+$shaman['database']['username'] = 'jofe14';
+$shaman['database']['password'] = 'Fc%*4Iu#';
+$shaman['database']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");*/
+

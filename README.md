@@ -2,6 +2,9 @@ Shaman-base
 ==================
  
 A boilerplate for smaller websites or webbapplications using PHP.
+It's structured with a several modules in the src-folder which is operated by 
+page-controllers in the webroot. The main html-structure of the site as well as
+basic functions is to be found in the theme-folder.
  
 Built by Jonathan Ferm
  
